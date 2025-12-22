@@ -1,5 +1,5 @@
 pipeline {
-    agent linux-agent
+    agent { label 'linux-agent' }
 
     parameters {
         choice(name: 'ACTION', choices: ['Deploy New Version', 'Rollback'], description: 'Choose whether to build code or rollback.')
