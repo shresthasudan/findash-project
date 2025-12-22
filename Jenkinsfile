@@ -9,7 +9,7 @@ pipeline {
 
     environment {
         // Nexus Internal URL (Jenkins -> Nexus)
-        NEXUS_REGISTRY = 'nexus.nchldemo.com:5000'
+        NEXUS_REGISTRY = 'registry.nchldemo.com'
         // Image Name
         IMAGE_NAME = 'findash-app-trainer' // Add your username here
         // Jenkins Credential ID
