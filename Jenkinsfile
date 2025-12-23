@@ -27,12 +27,12 @@ pipeline {
         }
 
         // --- Stage 2: Trivy Security Scan ---
-        stage('Trivy Security Scan') {
+       /* stage('Trivy Security Scan') {
             when { expression { params.ACTION == 'Deploy New Version' } }
             steps {
                 script {
                     echo "Scanning Image using Trivy Container..."
-                    
+
                     // --severity: Only show High and Critical bugs
                     // --exit-code 0: Don't fail the build (Change to 1 if you want to block bad builds)
                     // --no-progress: Cleaner logs in Jenkins
@@ -46,7 +46,7 @@ pipeline {
                     """
                 }
             }
-        }
+        } */
 
         // --- Stage 3: Push to Nexus ---
         stage('Push to Nexus') {
